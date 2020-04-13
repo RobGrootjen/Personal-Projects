@@ -40,7 +40,7 @@ def startDrag():
     time.sleep(1)
     repeat = repsNeeded()
     repeat = int(repeat)
-    
+
     #Get position 1
     time.sleep(3)
     currentPosition1 = pyautogui.position()
@@ -52,12 +52,17 @@ def startDrag():
     #Start process.
     def autoMouse(x,y):
         for i in range(repeat):
-            time.sleep(0.1)
+
             pyautogui.moveTo(x)
+            time.sleep(0.25)
             pyautogui.mouseDown(button='left')
+            time.sleep(0.25)
+
             pyautogui.moveTo(y)
-            time.sleep(0.1)
+            time.sleep(0.25)
             pyautogui.mouseUp(button='left')
+            time.sleep(0.25)
+
 
     autoMouse(currentPosition1,currentPosition2)
 
